@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <script>
+      // js data simulation
+      window.data = {
+        color: danger,
+        userId: 10,
+        disabled: false
+      }
+      </script>
+    <script src="./src/index.ts"></script>
+    <div class="container example-page-component p-4">
+      <div class="row mt-4">
+        <div class="col-6">
+          <div class="card change-color-component">
+            <div class="card-body">
+              <h5 class="card-title">Change color component</h5>
+              <p class="card-text js-color">primary</p>
+              <button class="btn btn-primary">Change color</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="card">
+            <div class="card-body random-number-component">
+              <h5 class="card-title">Random number component</h5>
+              <p class="card-text js-random-number">12</p>
+              <button class="btn btn-primary">Generate number</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col-6">
+          <div class="card load-data-component">
+            <div class="card-body">
+              <h5 class="card-title">Load data component</h5>
+              <p class="card-text js-user-name"></p>
+              <button class="btn btn-primary">Load</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="card form-validation-component">
+            <div class="card-body">
+              <h5 class="card-title">Form component</h5>
+              <form>
+                <div class="form-group">
+                  <label for="email">Email address</label>
+                  <input
+                    type="email"
+                    class="form-control js-email"
+                    id="email"
+                    placeholder="Enter email"
+                  />
+                  <small
+                    id="email-error"
+                    class="form-text text-danger d-none js-email-error"
+                    >Something wrong</small
+                  >
+                  <small
+                  id="email-success"
+                  class="form-text text-success d-none js-email-success"
+                  >It's correct!</small
+                >
+                </div>
+              </form>
+              <button class="btn btn-primary mt-2">Validate</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col-6">
+          <div class="card load-external-component">
+            <div class="card-body">
+              <h5 class="card-title">Load component</h5>
+              <button class="btn btn-primary m-auto">
+                Load component
+              </button>
+            </div>
+            <div class="confirm-component" />
+          </div>
+        </div>
+      </div>
+        <div class="col-6">
+          <div class="card disable-sections-component">
+            <div class="card-body">
+              <h5 class="card-title">Disable components</h5>
+              <button class="btn btn-primary m-auto js-disable">
+                Disable
+              </button>
+              <button class="btn btn-primary m-auto d-none js-enable">
+                Enable
+              </button>
+            </div>
+            <div class="confirm-component" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
